@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CommentModel {
+  id: String!
+  comment: String!
+  date: String!
+}
+
+type CommentAddedResponse {
+  commentId: String!
+  comment: String!
+  date: String!
+}
+
+type Query {
+  getComments: [CommentModel!]!
+}
+
+type Mutation {
+  addComments(id: String!, comment: String!): CommentModel!
+}
+
+type Subscription {
+  commentAdded(commentId: String!): CommentAddedResponse!
+}
