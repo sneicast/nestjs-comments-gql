@@ -3,6 +3,7 @@ import { CommentsModule } from './comments/comments.module';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
+import { DemoService } from './demo/demo.service';
 
 @Module({
   imports: [
@@ -19,6 +20,6 @@ import { join } from 'path';
     CommentsModule,
   ],
   controllers: [],
-  providers: [],
+  providers: [DemoService],
 })
 export class AppModule {}
